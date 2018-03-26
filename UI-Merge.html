@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- Intégration des CSS Spéciaux -->
+        <link href="css/finacoop.merge.css" rel="stylesheet">
+        <style>
+            .main.container {
+                margin-top: 7em;
+            }
+			.pusher {
+				background-color: red;
+			}
+			.ui.sidebar {
+				overflow: visible !important;
+            }
+            .ui.sidebar.menu {
+                background-color: #0f2032;
+                font-size: 1.1em;
+            }
+            .ui.fixed.menu {
+                background-color: #b2cd39;
+            }
+            .ui.fixed.menu .item {
+                color: #0f2032;
+            }
+			.ui.compact.menu {
+			   position: relative;
+			}
+			.floating.ui.red.circular.tiny.label {
+			    padding:2px 3px;
+				top: 10px;
+				left: 47px;
+			}
+
+        </style>
+    </head>
+    <body>
+	     
+    <header id="header" class="ui top fixed inverted main menu">
+        <div class="ui container">
+		    <div class="ui search right item">
+			  <div class="ui icon input">
+				<input class="prompt" placeholder="Common passwords..." type="text">
+				<i class="search icon"></i>
+			  </div>
+			  <div class="results"></div>
+			</div>
+			<div class="right item">
+			 
+			</div>
+            <div class="right menu">   
+			   <div class="ui simple dropdown item">
+                    <i class="icon large bell"></i>
+					<div class="floating ui red circular tiny label">
+					  <span>9</span>
+					</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+					<div class="ui cards">
+						   <div class="card">
+								<div class="content">
+								  <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+								  <div class="header">
+									Elliot Fu
+								  </div>
+								  <div class="meta">
+									Friends of Veronika
+								  </div>
+								  <div class="description">
+									Elliot requested permission to view your contact details
+								  </div>
+								</div>
+								<div class="extra content">
+								  <div class="ui two buttons">
+									<div class="ui basic green button">Approve</div>
+									<div class="ui basic red button">Decline</div>
+								  </div>
+								</div>
+						  </div>
+						  <div class="card">
+								<div class="content">
+								  <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+								  <div class="header">
+									Elliot Fu
+								  </div>
+								  <div class="meta">
+									Friends of Veronika
+								  </div>
+								  <div class="description">
+									Elliot requested permission to view your contact details
+								  </div>
+								</div>
+								<div class="extra content">
+								  <div class="ui two buttons">
+									<div class="ui basic green button">Approve</div>
+									<div class="ui basic red button">Decline</div>
+								  </div>
+								</div>
+						  </div>
+                       </div>
+					</div>
+                </div>
+               <div class="ui simple dropdown item">
+                    <img class="ui avatar image" src="https://www.w3schools.com/howto/img_avatar.png"> John Doe
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">Se déconnecter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+    <nav id="nav" class="ui sidebar visible inverted vertical menu"> 
+        <div class="ui header item">
+			<img class="ui avatar image" src="https://www.w3schools.com/howto/img_avatar.png"> John Doe
+        </div>
+		 <div class="ui left pointing dropdown link item">
+			<i class="dropdown icon"></i>
+			Menu 1
+			<div class="menu">
+			  <div class="item">Item 1</div>
+			  <div class="item">Item 2</div>
+			  <div class="item">Item 3</div>
+			</div>
+		  </div>
+		  <a class="item">
+			Item 4
+		  </a>
+		  <a class="item">
+			Item 5
+		  </a>
+    </nav>
+   
+    <section class="pusher">
+        <div id="app" style="width:100%;">
+            <!-- Partie de gauche : Formulaire -->
+            <div id="left">
+                <form method="post" action="http://www.perdu.com">
+                <div class="input-group">
+                <label class="write" for="nomCli">Nom Entité : </label>
+                <input id="nomCli" name="nomCli" v-model="nomEnt">
+                </div>
+                <div class="input-group">
+                <label class="write" for="fj">Forme juridique : </label>
+                <input id="fj" name="fj" v-model="fj">
+                </div>
+                <div class="input-group">
+                <label class="write" for="adr">Adresse : </label>
+                <input id="adr" name="adr" v-model="adr">
+                </div>
+                <div class="input-group">
+                <label class="write" for="cp">Code Postal : </label>
+                <input id="cp" name="cp" v-model="cp">
+                </div>
+                <div class="input-group">
+                <label class="write" for="datedeb">Début Exercice : </label>
+                <input type="date" id="datedeb" name="datedeb" v-model="datedeb">
+                </div>
+                <div class="input-group">
+                <label class="write" for="datefin">Fin Exercice : </label>
+                <input type="date" id="datefin" name="datefin" v-model="datefin">
+                </div>
+                <div class="input-group">
+                <label class="write" for="prenom">Prenom Client : </label>
+                <input id="prenom" name="prenom" v-model="prenom">
+                </div>
+                <div class="input-group">
+                <label class="write" for="nom">Nom Client : </label>
+                <input id="nom" name="nom" v-model="nom">
+                </div>
+                <div class="input-group">
+                <label class="write" for="fonction">Fonction Client : </label>
+                <input id="fonction" name="fonction" v-model="fonction">
+                </div>
+                <div>
+                    <input type="radio" id="ChH"
+                     name="sexe" value="Monsieur" v-model="genre">
+                    <label for="ChH">♂</label>
+
+                    <input type="radio" id="ChF"
+                     name="sexe" value="Madame" v-model="genre">
+                    <label for="ChF">♀</label>
+                </div>
+                <input type="submit" value="Valider" class="ui button"/>
+                </form>
+            </div>
+            <!-- Partie de droite : Aperçu de la LC -->
+            <div id="right">
+            
+                <div id="apercu">
+                    <img src="logo.jpg" class="logoAper"/>
+                    <div style="text-align:right;width:85%;margin-left:7.5%;font-size:12px;margin-bottom:5px;">
+                        {{ nomEnt }}<br/>
+                        ({{ fj }})<br/>
+                        {{ adr }}<br/>
+                        {{ cp }}<br/>
+                        <br/>
+                        Paris, le {{ dateContrat }}
+                    </div>
+                    <div style="width:85%;margin-left:7.5%;font-size:12px;">
+                        Objet : <b>Lettre de coopération comptable - Exercice {{ datedeb }} ~ {{ datefin }}</b>
+                        <br/>
+                        <br/>
+                        <u><i>A l'attention de {{ prenom }} {{ nom }}, {{ fonction }}</i></u>
+                        <br/>
+                        <br/>
+                        <span v-if="genre === 'Monsieur'">Cher {{ genre }},</span>
+                        <span v-else-if="genre === 'Madame'">Chère {{ genre }},</span>
+                        <br/>
+                        <br/>
+                        Nous vous remercions de la confiance que vous nous avez témoignée en envisageant de nous
+                        confier, en qualité d’expert-comptable, une mission de présentation des comptes annuels de votre
+                        entité pour la période {{ datedeb }} ~ {{ datefin }}
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <script>
+            var ajd = new Date();
+            var app = new Vue({
+              el: '#app',
+              data: {
+                nomEnt: '',
+                fj: '',
+                adr: '',
+                cp: '',
+                datedeb: '',
+                datefin: '',
+                prenom: '',
+                nom: '',
+                fonction: '',
+                genre: '',
+                dateContrat: ajd.getDate()+"/"+ajd.getMonth()+"/"+ajd.getFullYear()
+              }
+            })
+        </script>
+        
+        
+        <!-- Mise en format A4 -->
+        <script>
+            //210*297
+            function makeA4(){
+                var largeur = document.getElementById('apercu').offsetWidth;
+                var longueur = (largeur*297)/210;
+                document.getElementById('apercu').style.height = longueur+"px";
+                document.getElementById('left').style.minHeight = longueur+"px";
+            }
+            makeA4();
+        </script>
+        <!-- Hold changement de taille -->
+        <script>
+            window.onresize = makeA4;
+        </script>
+    </section>
+    
+    <script>
+        function init(){
+            document.getElementById('app').style.marginLeft = document.getElementById('nav').offsetWidth + 20 + "px";
+            document.getElementById('app').style.width = "calc(100% - "+document.getElementById('nav').offsetWidth+"px)";
+            document.getElementById('app').style.marginTop = document.getElementById('header').offsetHeight + 20 + "px";  
+        }
+        init();
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+	<script>jQuery(".ui.dropdown").dropdown();</script>
+	</body>
+</html>
