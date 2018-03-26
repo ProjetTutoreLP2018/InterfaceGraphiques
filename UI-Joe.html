@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <style>
+            .main.container {
+                margin-top: 7em;
+            }
+			.pusher {
+				background-color: red;
+			}
+			.ui.sidebar {
+				overflow: visible !important;
+            }
+            .ui.sidebar.menu {
+                background-color: #0f2032;
+                font-size: 1.1em;
+            }
+            .ui.fixed.menu {
+                background-color: #b2cd39;
+            }
+            .ui.fixed.menu .item {
+                color: #0f2032;
+            }
+        </style>
+    </head>
+    <body>
+	     
+    <div class="ui top fixed inverted main menu">
+        <div class="ui container">
+		    <div class="ui search right item">
+			  <div class="ui icon input">
+				<input class="prompt" placeholder="Common passwords..." type="text">
+				<i class="search icon"></i>
+			  </div>
+			  <div class="results"></div>
+			</div>
+			<div class="right item">
+			 
+			</div>
+            <div class="right menu">   
+			   <a class="item">
+				
+			   </a>
+			   <div class="ui simple dropdown item">
+                    <i class="bell large icon"></i>
+				    <div class="horizontal ui red circular label">22</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+					<div class="ui cards">
+						   <div class="card">
+								<div class="content">
+								  <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+								  <div class="header">
+									Elliot Fu
+								  </div>
+								  <div class="meta">
+									Friends of Veronika
+								  </div>
+								  <div class="description">
+									Elliot requested permission to view your contact details
+								  </div>
+								</div>
+								<div class="extra content">
+								  <div class="ui two buttons">
+									<div class="ui basic green button">Approve</div>
+									<div class="ui basic red button">Decline</div>
+								  </div>
+								</div>
+						  </div>
+						  <div class="card">
+								<div class="content">
+								  <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+								  <div class="header">
+									Elliot Fu
+								  </div>
+								  <div class="meta">
+									Friends of Veronika
+								  </div>
+								  <div class="description">
+									Elliot requested permission to view your contact details
+								  </div>
+								</div>
+								<div class="extra content">
+								  <div class="ui two buttons">
+									<div class="ui basic green button">Approve</div>
+									<div class="ui basic red button">Decline</div>
+								  </div>
+								</div>
+						  </div>
+                       </div>
+					</div>
+                </div>
+               <div class="ui simple dropdown item">
+                    <img class="ui avatar image" src="https://www.w3schools.com/howto/img_avatar.png"> John Doe
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">Se déconnecter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="ui sidebar visible inverted vertical menu"> 
+        <div class="ui header item">
+			<img class="ui avatar image" src="https://www.w3schools.com/howto/img_avatar.png"> John Doe
+        </div>
+		 <div class="ui left pointing dropdown link item">
+			<i class="dropdown icon"></i>
+			Menu 1
+			<div class="menu">
+			  <div class="item">Item 1</div>
+			  <div class="item">Item 2</div>
+			  <div class="item">Item 3</div>
+			</div>
+		  </div>
+		  <a class="item">
+			Item 4
+		  </a>
+		  <a class="item">
+			Item 5
+		  </a>
+    </div>
+   
+    <div class="pusher">
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+	<script>jQuery(".ui.dropdown").dropdown();</script>
+	</body>
+</html>
