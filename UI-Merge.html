@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <!-- Intégration des CSS Spéciaux -->
         <link href="css/finacoop.merge.css" rel="stylesheet">
@@ -144,41 +144,42 @@
                 <form method="post" action="http://www.perdu.com">
                 <div class="input-group">
                 <label class="write" for="nomCli">Nom Entité : </label>
-                <input id="nomCli" name="nomCli" v-model="nomEnt">
+                <input class="textIn" id="nomCli" name="nomCli" v-model="nomEnt">
                 </div>
                 <div class="input-group">
                 <label class="write" for="fj">Forme juridique : </label>
-                <input id="fj" name="fj" v-model="fj">
+                <input class="textIn" id="fj" name="fj" v-model="fj">
                 </div>
                 <div class="input-group">
                 <label class="write" for="adr">Adresse : </label>
-                <input id="adr" name="adr" v-model="adr">
+                <input class="textIn" id="adr" name="adr" v-model="adr">
                 </div>
                 <div class="input-group">
                 <label class="write" for="cp">Code Postal : </label>
-                <input id="cp" name="cp" v-model="cp">
+                <input class="textIn" id="cp" name="cp" v-model="cp">
                 </div>
                 <div class="input-group">
                 <label class="write" for="datedeb">Début Exercice : </label>
-                <input type="date" id="datedeb" name="datedeb" v-model="datedeb">
+                <input class="textIn" type="date" id="datedeb" name="datedeb" v-model="datedeb">
                 </div>
                 <div class="input-group">
                 <label class="write" for="datefin">Fin Exercice : </label>
-                <input type="date" id="datefin" name="datefin" v-model="datefin">
+                <input class="textIn" type="date" id="datefin" name="datefin" v-model="datefin">
                 </div>
                 <div class="input-group">
                 <label class="write" for="prenom">Prenom Client : </label>
-                <input id="prenom" name="prenom" v-model="prenom">
+                <input class="textIn" id="prenom" name="prenom" v-model="prenom">
                 </div>
                 <div class="input-group">
                 <label class="write" for="nom">Nom Client : </label>
-                <input id="nom" name="nom" v-model="nom">
+                <input class="textIn" id="nom" name="nom" v-model="nom">
                 </div>
                 <div class="input-group">
                 <label class="write" for="fonction">Fonction Client : </label>
-                <input id="fonction" name="fonction" v-model="fonction">
+                <input class="textIn" id="fonction" name="fonction" v-model="fonction">
                 </div>
                 <div>
+                    Genre :
                     <input type="radio" id="ChH"
                      name="sexe" value="Monsieur" v-model="genre">
                     <label for="ChH">♂</label>
